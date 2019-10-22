@@ -58,11 +58,11 @@ static int  gStartupCount = 0;      // Global startup count (for every WSPStartu
 
 // Parses a buffer looking for an HTTP GET request and returns the requested URL
 int
-FindUrl( 
-        __in_ecount(buflen) char *buf,
-        int buflen,
-        __out char **start
-        );
+FindUrl(
+	__in_ecount(buflen) const char   *buf,
+	int     buflen,
+	__out const char  **start
+);
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -581,8 +581,8 @@ WSPSend(
 {
     SOCKET_CONTEXT *sockContext = NULL;
     DWORD           i;
-    char           *start = NULL,
-                    urlstr[ DEFAULT_PRINT_BUFFER ];
+	const char           *start = NULL;
+	char urlstr[ DEFAULT_PRINT_BUFFER ];
     int             rc = SOCKET_ERROR,
                     len;
 
@@ -1149,12 +1149,12 @@ FreeLspProviders(
 //
 int
 FindUrl( 
-        __in_ecount(buflen) char   *buf,
+        __in_ecount(buflen) const char   *buf,
         int     buflen,
-        __out char  **start
+        __out const char  **start
         )
 {
-    char   *subptr = NULL, *substart = NULL;
+    const char   *subptr = NULL, *substart = NULL;
     int     subidx,
             idx;
 

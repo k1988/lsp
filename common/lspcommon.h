@@ -21,6 +21,7 @@
 #include <winsock2.h>
 #include <ws2spi.h>
 #include <MSWSock.h>
+#define _WINSOCK_DEPRECATED_NO_WARNINGS 1
 
 // Name of the Winsock DDL which is needed by the installer to determine if
 // WSCUpdateProvider is available.

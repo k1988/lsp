@@ -3,7 +3,7 @@
 #include <ntverp.h>
 
 #define MANIFEST_RESOURCE_ID        1
-MANIFEST_RESOURCE_ID    RT_MANIFEST "instlsp.exe.manifest"
+//MANIFEST_RESOURCE_ID    RT_MANIFEST "instlsp.exe.manifest"
 
 #define VER_FILETYPE                VFT_APP
 #define VER_FILESUBTYPE             VFT2_UNKNOWN
